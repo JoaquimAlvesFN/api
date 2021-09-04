@@ -14,11 +14,11 @@
     "host": "locahost:4000",
     "servers": [
         {
-            "url": "http://localhost:4000",
+            "url": "http://localhost:4000/",
             "description": "Development Server"
         },
         {
-            "url": "http://206.189.229.140:4000",
+            "url": "http://206.189.229.140:4000/",
             "description": "Production Server"
         }
     ],
@@ -449,17 +449,8 @@
     "securityDefinitions": {
         "api_key": {
             "type": "apiKey",
-            "name": "api_key",
+            "name": "Authorization",
             "in": "header"
-        },
-        "petstore_auth": {
-            "type": "oauth2",
-            "authorizationUrl": "https://petstore.swagger.io/oauth/authorize",
-            "flow": "implicit",
-            "scopes": {
-                "read:pets": "read your pets",
-                "write:pets": "modify pets in your account"
-            }
         }
     },
     "definitions": {
