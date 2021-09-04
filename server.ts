@@ -14,8 +14,11 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+let options = {
+    customSiteTitle: "Api Rest"
+}
 
-app.use('/', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+app.use('/', swaggerUi.serve, swaggerUi.setup(swaggerDocument, options));
 
 app.use(routes);
 
